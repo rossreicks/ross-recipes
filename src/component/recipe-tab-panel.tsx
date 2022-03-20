@@ -85,14 +85,14 @@ export default function NavigationTabs({ ingredients, steps }) {
       </Box>
       <TabPanel value={value} index={0}>
         <Ingredients>
-          {ingredients.map((x, i) => (
+          {ingredients?.map((x, i) => (
             <li key={i}>{x}</li>
           ))}
         </Ingredients>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Methods>
-          {steps.map((x, i) => (
+          {steps?.map((x, i) => (
             <li key={i}>{x}</li>
           ))}
         </Methods>

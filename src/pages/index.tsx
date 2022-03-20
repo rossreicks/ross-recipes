@@ -30,7 +30,7 @@ type Props = {
 const Home = ({ recipes }) => {
   return (
     <PageLayout>
-      <h1>Ross' Recipes</h1>
+      <h1>Ross&lsquo; Recipes</h1>
       <RecipeList>
         {recipes.map((recipe, i) => (
           <li key={i}>

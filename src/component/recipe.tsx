@@ -36,8 +36,6 @@ const RecipeBody = styled.div({
 });
 
 export const Recipe = ({ recipe }: { recipe: GetRecipe_recipe }) => {
-  console.log(recipe.image);
-
   const imageUrl = recipe.image && recipe.image[0] ? recipe.image[0].url : "";
 
   return (
