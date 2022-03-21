@@ -4,23 +4,19 @@ import styled from "@emotion/styled";
 import { client } from "../client";
 import { GET_RECIPES } from "../queries/get-recipes";
 import { GetRecipes_recipes } from "../types/generated/GetRecipes";
+import RecipeThumbnail from "../component/recipe-thumbnail";
 
 const PageLayout = styled.div({
-  background: "#fff",
+  background: "lightGrey",
   font: "13px 'Open Sans', sans-serif",
   color: "#222",
-  gap: 10,
-  a: {
-    fontSize: 22,
-    color: "black",
-    fontWeight: "bold",
-  },
 });
 
-const RecipeList = styled.ul({
+const RecipeList = styled.div({
   display: "flex",
+  flexWrap: "wrap",
   justifyContent: "center",
-  flexDirection: "column",
+  gap: 20,
 });
 
 type Props = {
@@ -30,14 +26,10 @@ type Props = {
 const Home = ({ recipes }) => {
   return (
     <PageLayout>
-      <h1>Ross&lsquo; Recipes</h1>
+      <h1>Ross&rsquo; Recipes</h1>
       <RecipeList>
         {recipes.map((recipe, i) => (
-          <li key={i}>
-            <Link key={recipe.slug} href={"/" + recipe.slug}>
-              {recipe.title}
-            </Link>
-          </li>
+          <RecipeThumbnail key={i} recipe={recipe} />
         ))}
       </RecipeList>
     </PageLayout>

@@ -64,7 +64,7 @@ const Methods = styled.ul({
   },
 });
 
-export default function NavigationTabs({ ingredients, steps }) {
+export default function NavigationTabs({ ingredients = [], steps = [] }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (_, newValue: number) => {
@@ -85,14 +85,14 @@ export default function NavigationTabs({ ingredients, steps }) {
       </Box>
       <TabPanel value={value} index={0}>
         <Ingredients>
-          {ingredients?.map((x, i) => (
+          {ingredients.map((x, i) => (
             <li key={i}>{x}</li>
           ))}
         </Ingredients>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Methods>
-          {steps?.map((x, i) => (
+          {steps.map((x, i) => (
             <li key={i}>{x}</li>
           ))}
         </Methods>
