@@ -41,7 +41,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     query: GET_RECIPES,
   });
 
-  return { props: { recipes: data.recipes } };
+  return { props: { recipes: data.recipes }, revalidate: 60 };
 };
 
 export default Home;
