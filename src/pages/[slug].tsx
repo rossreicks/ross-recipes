@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps<GetRecipe_recipe> = async ({
     },
   });
 
-  return { props: data.recipe };
+  return { props: data.recipe, revalidate: 60 };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
