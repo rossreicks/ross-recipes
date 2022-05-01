@@ -36,7 +36,7 @@ type Props = {
 const RecipeThumbnail = ({ recipe }: Props) => {
   return (
     <Card>
-      <Image width={300} height={200} src={recipe.image[0].url}></Image>
+      {Boolean(recipe.image?.length) && <Image width={300} height={200} src={recipe.image[0].url}></Image>}
       <Box padding="0 14px 10px" display="flex" flexDirection="column" gap={2}>
         <div>
           <h3>{recipe.title}</h3>

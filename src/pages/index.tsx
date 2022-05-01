@@ -1,5 +1,4 @@
-import { GetStaticProps } from "next";
-import Link from "next/link";
+import { GetServerSideProps } from "next";
 import styled from "@emotion/styled";
 import { client } from "../client";
 import { GET_RECIPES } from "../queries/get-recipes";
@@ -36,12 +35,12 @@ const Home = ({ recipes }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { data } = await client.query({
     query: GET_RECIPES,
   });
 
-  return { props: { recipes: data.recipes }, revalidate: 60 };
+  return { props: { recipes: data.recipes } };
 };
 
 export default Home;
