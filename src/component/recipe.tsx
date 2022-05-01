@@ -45,8 +45,8 @@ export const Recipe = ({ recipe }: { recipe: GetRecipe_recipe }) => {
         {Boolean(imageUrl) && (
           <Image
             objectFit="cover"
-            objectPosition="top"
-            height="100px"
+            objectPosition="50% 50%"
+            height="300px"
             width="600px"
             src={imageUrl}
           />
