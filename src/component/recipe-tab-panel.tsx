@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Typography, Tabs, Tab } from "@mui/material";
+import { Box, Typography, Tabs, Tab, Checkbox, FormGroup, FormControlLabel } from "@mui/material";
 import React from "react";
 
 interface TabPanelProps {
@@ -35,7 +35,7 @@ function a11yProps(index: number) {
   };
 }
 
-const Ingredients = styled.ul({
+const Ingredients = styled(FormGroup)({
   margin: 0,
   padding: 0,
   marginLeft: 10,
@@ -53,10 +53,11 @@ const Ingredients = styled.ul({
   },
 });
 
-const Methods = styled.ul({
+const Methods = styled(FormGroup)({
   listStyle: "",
   margin: 0,
   padding: 0,
+  gap: 10,
   marginLeft: 10,
   columnCount: 1,
   li: {
@@ -86,14 +87,14 @@ export default function NavigationTabs({ ingredients = [], steps = [] }) {
       <TabPanel value={value} index={0}>
         <Ingredients>
           {ingredients.map((x, i) => (
-            <li key={i}>{x}</li>
+            <FormControlLabel control={<Checkbox />} key={i} label={x} />
           ))}
         </Ingredients>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Methods>
           {steps.map((x, i) => (
-            <li key={i}>{x}</li>
+            <FormControlLabel control={<Checkbox />} key={i} label={x} />
           ))}
         </Methods>
       </TabPanel>
