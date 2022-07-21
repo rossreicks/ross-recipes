@@ -46,7 +46,7 @@ const RecipeThumbnail = ({ recipe }: Props) => {
           <InfoItem>
             <Box display="flex" gap={1}>
               <AccessTimeIcon />
-              <Typography fontWeight="bold" color="#ff4f87">
+              <Typography fontWeight="bold" color="#ea8a81">
                 {recipe.time}
               </Typography>
             </Box>
@@ -55,7 +55,7 @@ const RecipeThumbnail = ({ recipe }: Props) => {
           <InfoItem>
             <Box display="flex" gap={1}>
               <MenuBookIcon />
-              <Typography fontWeight="bold" color="#ff4f87">
+              <Typography fontWeight="bold" color="#ea8a81">
                 {recipe.ingredient.length}
               </Typography>
             </Box>
@@ -64,7 +64,7 @@ const RecipeThumbnail = ({ recipe }: Props) => {
           <InfoItem>
             <Box display="flex" gap={1}>
               <PersonOutlineOutlinedIcon />
-              <Typography fontWeight="bold" color="#ff4f87">
+              <Typography fontWeight="bold" color="#ea8a81">
                 {recipe.servings}
               </Typography>
             </Box>
@@ -75,7 +75,7 @@ const RecipeThumbnail = ({ recipe }: Props) => {
           <Typography>{recipe.description}</Typography>
         </DescriptionBox>
         <Button
-          sx={{ backgroundColor: "#ff4f87" }}
+          sx={{ backgroundColor: "#ea8a81" }}
           variant="contained"
           fullWidth
           href={"/" + recipe.slug}

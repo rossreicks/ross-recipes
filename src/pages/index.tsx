@@ -6,9 +6,10 @@ import { GetRecipes_recipes } from "../types/generated/GetRecipes";
 import RecipeThumbnail from "../component/recipe-thumbnail";
 
 const PageLayout = styled.div({
-  background: "lightGrey",
+  textAlign: 'center',
+  background: "#f4d8ae",
   font: "13px 'Open Sans', sans-serif",
-  color: "#222",
+  color: "#301008",
 });
 
 const RecipeList = styled.div({
