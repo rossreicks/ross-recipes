@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pretty-quick": "pretty-quick",
     "gql:reload": "yarn gql:schema && yarn gql:generate && yarn pretty-quick",
     "gql:schema": "apollo service:download --endpoint=https://api-us-east-1.graphcms.com/v2/cl0zfz1k64xi101xv8wi7adad/master graphql-schema.json",
     "gql:generate": "apollo codegen:generate ./src/types/generated/ --localSchemaFile=graphql-schema.json --target=typescript --tagName=gql --outputFlat"
